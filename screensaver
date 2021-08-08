@@ -7,14 +7,14 @@ white="\033[0m"
 while (( 1 ))
 do
 	id=$RANDOM%2
-	if (( id == 0 )); 
-	then
+	if (( id == 0 )); then
 		color=${colors[$RANDOM % 16]}
 		echo -n "$color$RANDOM$white"
 	else
+		color=${colors[$RANDOM % 16]}
 		echo -n "$color"
 		./random_word
 		echo -n "$white"
 	fi
-		sleep 0.02
+		sleep 0.009
 done
